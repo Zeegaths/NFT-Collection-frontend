@@ -11,7 +11,7 @@ const useCollections = () => {
             );
 
             const promises = tokenIDs.map((x) =>
-                fetch(`${import.meta.env.VITE_token_base_url}/${x}`)
+                fetch(`${import.meta.env.VITE_token_base_url}${x}`)
             );
 
             const tokensMetadataResponse = await Promise.all(promises);

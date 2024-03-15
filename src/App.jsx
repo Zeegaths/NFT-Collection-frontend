@@ -28,7 +28,7 @@ function App() {
                                 myTokensData.map((x) => (
                                     <Box key={x.dna} className="w-[20rem]">
                                         <img
-                                            src={x.image}
+                                            src={x.image.replace("ipfs://", "https://ipfs.io/ipfs/")}
                                             className="w-full object-contain"
                                             alt={x.name}
                                         />
@@ -54,7 +54,7 @@ function App() {
                                 tokensData.map((x) => (
                                     <Box key={x.dna} className="w-[20rem]">
                                         <img
-                                            src={x.image}
+                                            src={x.image.replace("ipfs://", "https://ipfs.io/ipfs/")}
                                             className="w-full object-contain"
                                             alt={x.name}
                                         />
