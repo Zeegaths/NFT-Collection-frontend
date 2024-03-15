@@ -29,13 +29,19 @@ const useHandleMint = () => {
 
                 if (receipt.status) {
                     return console.log("Mint successfull");
+                   
                 }
 
                 console.log("Failed to mint");
             } catch (error) {
                 console.log(error);
-
-                console.error("error: ", error);
+                let errorText;
+                if (error.reason === "Not enough minting fee") {
+                    errorText = "Insufficient gas fees";               
+                } else {
+                    errorText = "An unknown error occured";
+                }
+                console.error("error: ", errorText);                
             }
         },
         [chainId, walletProvider]

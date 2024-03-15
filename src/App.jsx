@@ -102,7 +102,9 @@ function App() {
                                         </Text>
                                         {myTokenIds.includes(index) ? (
                                             <Button className="px-8 py-2 text-xl mt-2">
-                                                Transfer
+                                                <a href={`https://testnets.opensea.io/assets/mumbai/${address}/${index}`} target="_blank" rel="noopener noreferrer">
+                                                    View on OpenSea
+                                                </a>
                                             </Button>
                                         ) : (
                                             <Button className="px-8 py-2 text-xl mt-2" onClick={() => { handleMint(address, index) }}>
