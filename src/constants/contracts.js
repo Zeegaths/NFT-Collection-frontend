@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import Abi from "./abi.json";
+import Abi from "./erc721.json";
 
 export const getNftContract = (providerOrSigner) =>
     new ethers.Contract(
